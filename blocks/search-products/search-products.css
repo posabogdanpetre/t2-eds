@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+
+body {
+  overflow: auto;
+}
+
+main .search-products {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  max-width: 780px;
+  margin: 0 auto;
+  position: relative;
+}
+
+main .search-products .carousel-wrapper {
+  position: relative;
+}
+
+main .search-products .carousel-container {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0 0 8px 0;
+}
+
+main .search-products .carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+main .search-products .product-card {
+  flex: 0 0 220px;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+  background: var(--background-color, #fff);
+}
+
+main .search-products .card-image {
+  flex: 6;
+  width: 100%;
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+main .search-products .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+main .search-products .cta-button {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 13px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  z-index: 2;
+}
+
+main .search-products .cta-button:hover {
+  opacity: 0.9;
+}
+
+main .search-products .card-content {
+  flex: 4;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+main .search-products .product-name {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+main .search-products .product-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+main .search-products .product-price {
+  font-weight: 600;
+}
+
+main .search-products .product-category {
+  display: inline-block;
+  padding: 2px 8px;
+  background: rgba(37, 99, 235, 0.15);
+  color: #2563eb;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+main .search-products .carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+main .search-products .carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+main .search-products .carousel-arrow:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+main .search-products .carousel-arrow.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+main .search-products .arrow-left {
+  left: -12px;
+}
+
+main .search-products .arrow-right {
+  right: -12px;
+}
+
+main .search-products .fade-gradient {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 60px;
+  pointer-events: none;
+  border-radius: 0 10px 10px 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  main .search-products {
+    background: transparent;
+  }
+  
+  main .search-products .product-card {
+    background: var(--background-color, #1a1a1a);
+  }
+  
+  main .search-products .product-category {
+    background: rgba(37, 99, 235, 0.25);
+    color: #5b9eff;
+  }
+}
+
+body.dark main .search-products {
+  background: transparent;
+}
+
+body.dark main .search-products .product-card {
+  background: var(--background-color, #1a1a1a);
+}
+
+body.dark main .search-products .product-category {
+  background: rgba(37, 99, 235, 0.25);
+  color: #5b9eff;
+}
