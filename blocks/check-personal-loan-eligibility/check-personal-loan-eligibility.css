@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .check-personal-loan-eligibility {
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 10px;
+  box-sizing: border-box;
+  color: #4f4f4f;
+}
+
+main .check-personal-loan-eligibility h1,
+main .check-personal-loan-eligibility h2,
+main .check-personal-loan-eligibility h3,
+main .check-personal-loan-eligibility [class*="title"] {
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+main .check-personal-loan-eligibility .cple-card {
+  max-width: 560px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Status banner */
+main .check-personal-loan-eligibility .cple-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border-left: 5px solid #b3b3b3;
+  background: #f2f4f5;
+}
+
+main .check-personal-loan-eligibility .cple-banner-pass {
+  border-left-color: #00a32e;
+  background: #eaf7ee;
+}
+
+main .check-personal-loan-eligibility .cple-banner-review {
+  border-left-color: #d98f00;
+  background: #fdf4e3;
+}
+
+main .check-personal-loan-eligibility .cple-banner-fail {
+  border-left-color: #6b7785;
+  background: #eef0f2;
+}
+
+main .check-personal-loan-eligibility .cple-banner-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  opacity: 0.6;
+}
+
+main .check-personal-loan-eligibility .cple-banner-status {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.26;
+  color: #333;
+}
+
+/* Criteria rows */
+main .check-personal-loan-eligibility .cple-criteria {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+main .check-personal-loan-eligibility .cple-row {
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: #f7f8f9;
+}
+
+main .check-personal-loan-eligibility .cple-row-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+main .check-personal-loan-eligibility .cple-criterion {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+main .check-personal-loan-eligibility .cple-pill {
+  flex: 0 0 auto;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 9px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+main .check-personal-loan-eligibility .cple-pill-pass {
+  background: #007d22;
+}
+
+main .check-personal-loan-eligibility .cple-pill-review {
+  background: #f4b32c;
+  color: #3d2b00;
+}
+
+main .check-personal-loan-eligibility .cple-pill-fail {
+  background: #6b7785;
+}
+
+main .check-personal-loan-eligibility .cple-explanation {
+  margin: 5px 0 0;
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: 0.78;
+}
+
+/* Panels */
+main .check-personal-loan-eligibility .cple-panels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+main .check-personal-loan-eligibility .cple-panel {
+  flex: 1 1 240px;
+  min-width: 0;
+  padding: 12px 15px;
+  border-radius: 8px;
+  background: #eef5f9;
+  border: 1px solid #d6e4ec;
+}
+
+main .check-personal-loan-eligibility .cple-panel-title {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #005485;
+}
+
+main .check-personal-loan-eligibility .cple-panel-list {
+  margin: 0;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+main .check-personal-loan-eligibility .cple-panel-list li {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #4f4f4f;
+}
+
+/* Actions */
+main .check-personal-loan-eligibility .cple-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+main .check-personal-loan-eligibility .cple-btn {
+  flex: 1 1 auto;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 14px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.15s ease, opacity 0.15s ease;
+}
+
+main .check-personal-loan-eligibility .cple-btn-secondary {
+  background: #005485;
+}
+
+main .check-personal-loan-eligibility .cple-btn-secondary:hover,
+main .check-personal-loan-eligibility .cple-btn-secondary:focus-visible {
+  background: #01426a;
+}
+
+main .check-personal-loan-eligibility .cple-btn-primary {
+  flex-basis: 100%;
+  background: #007d22;
+}
+
+main .check-personal-loan-eligibility .cple-btn-primary:hover,
+main .check-personal-loan-eligibility .cple-btn-primary:focus-visible {
+  background: #00a32e;
+}
+
+main .check-personal-loan-eligibility .cple-btn:focus-visible {
+  outline: 2px solid #77ddff;
+  outline-offset: 2px;
+}
+
+main .check-personal-loan-eligibility .cple-empty {
+  font-size: 14px;
+  text-align: center;
+  padding: 24px;
+  opacity: 0.7;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  main .check-personal-loan-eligibility { color: #e6e6e6; }
+  main .check-personal-loan-eligibility .cple-banner { background: #1c2733; }
+  main .check-personal-loan-eligibility .cple-banner-pass { background: #10331c; }
+  main .check-personal-loan-eligibility .cple-banner-review { background: #33290f; }
+  main .check-personal-loan-eligibility .cple-banner-fail { background: #232a31; }
+  main .check-personal-loan-eligibility .cple-banner-status { color: #f2f2f2; }
+  main .check-personal-loan-eligibility .cple-criterion { color: #f2f2f2; }
+  main .check-personal-loan-eligibility .cple-row { background: #1f2937; }
+  main .check-personal-loan-eligibility .cple-panel { background: #16242e; border-color: #274150; }
+  main .check-personal-loan-eligibility .cple-panel-title { color: #77ddff; }
+  main .check-personal-loan-eligibility .cple-panel-list li { color: #d3d9de; }
+}
+
+body.dark main .check-personal-loan-eligibility { color: #e6e6e6; }
+body.dark main .check-personal-loan-eligibility .cple-banner { background: #1c2733; }
+body.dark main .check-personal-loan-eligibility .cple-banner-pass { background: #10331c; }
+body.dark main .check-personal-loan-eligibility .cple-banner-review { background: #33290f; }
+body.dark main .check-personal-loan-eligibility .cple-banner-fail { background: #232a31; }
+body.dark main .check-personal-loan-eligibility .cple-banner-status { color: #f2f2f2; }
+body.dark main .check-personal-loan-eligibility .cple-criterion { color: #f2f2f2; }
+body.dark main .check-personal-loan-eligibility .cple-row { background: #1f2937; }
+body.dark main .check-personal-loan-eligibility .cple-panel { background: #16242e; border-color: #274150; }
+body.dark main .check-personal-loan-eligibility .cple-panel-title { color: #77ddff; }
+body.dark main .check-personal-loan-eligibility .cple-panel-list li { color: #d3d9de; }
