@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
+/* Required for correct iframe sizing — AEM section margins inflate shadow body */
+main > div,
+main > .section,
+main > .section:first-of-type {
+  margin: 0;
+}
+main > .section > div {
+  max-width: none;
+  padding: 0;
+}
+body {
+  overflow: auto;
+}
+
+main .build-multicover-bundle {
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding: 8px;
+  max-width: 780px;
+  line-height: 1.15;
+}
+
+main .build-multicover-bundle h3,
+main .build-multicover-bundle [class*="title"] {
+  font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+main .build-multicover-bundle .mcb-wrapper {
+  position: relative;
+}
+
+main .build-multicover-bundle .mcb-track {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 2px;
+}
+
+main .build-multicover-bundle .mcb-track::-webkit-scrollbar {
+  display: none;
+}
+
+main .build-multicover-bundle .mcb-card {
+  flex: 0 0 220px;
+  min-height: 360px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  box-sizing: border-box;
+}
+
+main .build-multicover-bundle .mcb-body {
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-height: 0;
+}
+
+main .build-multicover-bundle .mcb-title-row {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+main .build-multicover-bundle .mcb-title {
+  margin: 0 !important;
+  font-size: 14px !important;
+  font-weight: 700;
+  line-height: 1.2 !important;
+  color: inherit;
+}
+
+main .build-multicover-bundle .mcb-quote-badge {
+  align-self: flex-start;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.32);
+  color: #ffffff;
+  border: 1px solid rgba(119, 221, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+main .build-multicover-bundle .mcb-assets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+main .build-multicover-bundle .mcb-assets-chip {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: rgba(119, 221, 255, 0.16);
+  color: #ffffff;
+  border: 1px solid rgba(119, 221, 255, 0.4);
+}
+
+main .build-multicover-bundle .mcb-line {
+  margin: 0 !important;
+  font-size: 11px !important;
+  line-height: 1.35 !important;
+  color: inherit;
+  opacity: 0.9;
+}
+
+main .build-multicover-bundle .mcb-line strong {
+  opacity: 1;
+  font-weight: 700;
+}
+
+main .build-multicover-bundle .mcb-benefits,
+main .build-multicover-bundle .mcb-notes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+main .build-multicover-bundle .mcb-benefits-chip {
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(0, 163, 46, 0.22);
+  color: #ffffff;
+  border: 1px solid rgba(0, 163, 46, 0.5);
+}
+
+main .build-multicover-bundle .mcb-notes-chip {
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background: rgba(230, 134, 25, 0.2);
+  color: #ffffff;
+  border: 1px solid rgba(230, 134, 25, 0.55);
+}
+
+main .build-multicover-bundle .mcb-cta {
+  margin-top: auto;
+  width: 100%;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 4px;
+  background: #006b1e;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+main .build-multicover-bundle .mcb-cta:hover,
+main .build-multicover-bundle .mcb-cta:focus-visible {
+  background: #00822a;
+  outline: none;
+}
+
+main .build-multicover-bundle .mcb-cta:focus-visible {
+  outline: 2px solid #77ddff;
+  outline-offset: 2px;
+}
+
+main .build-multicover-bundle .mcb-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: #005485;
+  color: #ffffff;
+  font-size: 12px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  z-index: 5;
+  transition: background-color 0.15s ease;
+}
+
+main .build-multicover-bundle .mcb-nav:hover,
+main .build-multicover-bundle .mcb-nav:focus-visible {
+  background: #00688f;
+}
+
+main .build-multicover-bundle .mcb-nav:focus-visible {
+  outline: 2px solid #77ddff;
+  outline-offset: 2px;
+}
+
+main .build-multicover-bundle .mcb-nav-left {
+  left: 4px;
+}
+
+main .build-multicover-bundle .mcb-nav-right {
+  right: 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+  main .build-multicover-bundle { background: #111; }
+}
+body.dark main .build-multicover-bundle { background: #111; }
